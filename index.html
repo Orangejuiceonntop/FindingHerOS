@@ -10,13 +10,24 @@
       </p>
     </div>
     <div style="position: absolute; width: 98%; display: flex; justify-content: space-between; background-color: rgba(0,0,0,0.25)">
-      <p style="margin-left: 16px">
+      <p style="margin-left:16px">
         StacyOS
       </p>
-      <p style="margin-right: 16px">
-        6/10/2026 5:46 PM
+      <p id="timeElement"style="margin-right:16px">
+        Time
       </p>
     </div>
+    <script>
+      var currentTime = new Date().toLocaleTimeString();
+      var timeText = document.querySelector("#timeElement");
+      timeText.innerHTML = currentTime
+    </script>
+    <script>
+      setInterval(function() {
+        document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+      }, 1000);
+        
+    </script>
   </body>
 
 </html>
