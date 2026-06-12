@@ -16,7 +16,6 @@ function dragElement(element) {
   if (document.getElementById(element.id + "header")) {
     document.getElementById(element.id + "header").onmousedown = startDragging;
     element.userSelect = "none";
-    element.style.cursor = "grab";
   } else {
     element.onmousedown = startDragging;
   }
