@@ -7,3 +7,19 @@
   border: double 1px rgba(0, 0, 0, 0.15);
   margin-left: 6px;
 }
+
+.window {
+  border: solid;
+  border-width: 2px;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+}
+
+.windowheader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: move;
+}
