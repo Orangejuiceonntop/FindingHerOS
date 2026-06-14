@@ -27,3 +27,7 @@
   justify-content: space-between;
   cursor: move;
 }
+
+.selected {
+  border-radius: 20px
+}
