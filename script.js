@@ -79,6 +79,5 @@ function handleIconTap(element) {
 }
 
 var notesScreen = document.querySelector('#notes')
-
 var notesScreenClose = document.querySelector('#notesclose')
-notesScreen
+notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
