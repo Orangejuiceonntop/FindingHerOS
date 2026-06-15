@@ -6,6 +6,7 @@ setInterval(function() {
 }, 1000);
 
 dragElement(document.getElementById("welcome"));
+dragElement(document.querySelector('#notes'))
 
 function dragElement(element) {
   var initialX = 0;
@@ -76,3 +77,8 @@ function handleIconTap(element) {
     selectIcon(element)
   }
 }
+
+var notesScreen = document.querySelector('#notes')
+
+var notesScreenClose = document.querySelector('#notesclose')
+notesScreen
