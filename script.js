@@ -81,3 +81,42 @@ function handleIconTap(element) {
 var notesScreen = document.querySelector('#notes')
 var notesScreenClose = document.querySelector('#notesclose')
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+var biggestIndex = 1;
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () => handleWndowTap(element))
+}
+function handleWindowTap(element) {
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex
+}
+function handleWindowTap(element) {
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+
+var topBar = document.querySelector("#top")
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1
+}
+function handleWindowTap(element) {
+  biggestIndex++; // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1
+  deselectIcon(selectedIcon)
+}
+
+function initializeWindow(notes) {
+  var screen = document.querySelector("#" + elementName)
+  addWindowTapHandling(screen)
+  makeCloseable(elementname)
+  dragElement(screen)
+}
