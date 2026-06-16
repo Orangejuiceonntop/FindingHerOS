@@ -12,6 +12,7 @@
   border: solid;
   border-width: 2px;
   border-radius: 8px;
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;

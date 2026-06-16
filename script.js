@@ -82,7 +82,7 @@ var notesScreen = document.querySelector('#notes')
 var notesScreenClose = document.querySelector('#notesclose')
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
 
-var biggestIndex = 1;
+var biggestIndex = 5;
 function addWindowTapHandling(element) {
   element.addEventListener("mousedown", () => handleWndowTap(element))
 }
@@ -95,14 +95,14 @@ function handleWindowTap(element) {
   element.style.zIndex = biggestIndex;
 }
 function openWindow(element) {
-  element.style.display = "flex";
+  element.style.display = "block";
   biggestIndex++; // Increment biggestIndex by 1
   element.style.zIndex = biggestIndex;
 }
 
 var topBar = document.querySelector("#top")
 function openWindow(element) {
-  element.style.display = "flex";
+  element.style.display = "block";
   biggestIndex++; // Increment biggestIndex by 1
   element.style.zIndex = biggestIndex;
   topBar.style.zIndex = biggestIndex + 1
@@ -115,6 +115,13 @@ function handleWindowTap(element) {
 }
 
 function initializeWindow(notes) {
+  var screen = document.querySelector("#" + elementName)
+  addWindowTapHandling(screen)
+  makeCloseable(elementname)
+  dragElement(screen)
+}
+
+function initializeWindow(welcomeScreen) {
   var screen = document.querySelector("#" + elementName)
   addWindowTapHandling(screen)
   makeCloseable(elementname)
