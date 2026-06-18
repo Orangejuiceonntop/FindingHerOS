@@ -85,18 +85,20 @@ var notesScreenOpen = document.querySelector('#notesopen')
 notesScreenOpen.addEventListener("click", () => openWindow(notesScreen))
 
 var biggestIndex = 1;
-function addWindowTapHandling(element) {
-  element.addEventListener("mousedown", () => handleWndowTap(element))
-}
-function handleWindowTap(element) {
-  biggestIndex++; // Increment biggestIndex by 1
-  element.style.zIndex = biggestIndex
-}
 function openWindow(element) {
   element.style.display = "block";
   biggestIndex++; // Increment biggestIndex by 1
   element.style.zIndex = biggestIndex;
 }
+
+document.addEventListener('mousedown', (e) =>{
+  const clickedWindow = e.target.closest('.window');
+  if (clickedWindow) {
+    biggestIndex++;
+    clickedWindow.style.zIndex = biggestIndex
+    topBar.style.zIndex = biggestIndex + 1
+  }
+})
 
 var topBar = document.querySelector("#top")
 function openWindow(element) {
