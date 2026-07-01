@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <body style="font-family: Didot, serif; background-image: url('./images/Wallpaper\ 1.PNG'); background-size: cover; background-repeat: no-repeat">
+  <body>
     <div id="welcome" class="window" style="width: 30%;">
       <div id="welcomeheader" class="windowheader">
         <p class="closebutton" style="cursor: pointer" id="welcomeclose"></p>
@@ -11,12 +11,14 @@
         <p> </p>
       </div>
       <div style="background-color:#ffffff; width: 100%; height: 100%;">
-        <h1 style="margin:4px; color: #671812"> <strong> FIND HER</strong></h1>
+        <h1 style="margin:4px; color: #671812"><strong> FIND HER</strong></h1>
         <p>Stacy was an old classmate of yours during high school.
           You've since graduated. She's now missing. Now, with Stacy's old computer in your possession, figure out what happened what happened to her.
         </p>
       </div>
     </div>
+
+    //Top bar
     <div id="top" style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: flex; justify-content: space-between; background-color: rgb(255, 255, 255); border-bottom: solid #c4acac 2px;">
       <p style="margin-left:16px; color: #FAA5BB;">
         StacyOS
@@ -24,14 +26,18 @@
       <p id="welcomeopen" style=" cursor: pointer; margin-left: 100px; color: #671812">
         <strong>INFORMATION</strong>
       </p>
-      <p id="timeElement"style="margin-right:16px; color: #FAA5BB">
+      <p id="timeElement" style="margin-right:16px; color: #FAA5BB">
         Time
       </p>
     </div>
+
+    //App icons
     <div id="desktopApps" class="selected" style="padding-top: 64px; padding-left: 16px; text-align: center; position: absolute; left: 0">
       <image src="https://cdn.iconscout.com/icon/free/png-256/free-apple-notes-icon-svg-download-png-493153.png" style="width:64px; height: 64px; border-radius: 8px; cursor: pointer;" id="notesopen">
       <p>Diary</p>
     </div>
+
+    //App windows
     <div id="notes" class="window" style="width: 30%; height: 70%; display: none">
       <div id="notesheader" class="windowheader">
         <p class="closebutton" style="cursor: pointer" id="notesclose"></p>
@@ -43,8 +49,16 @@
       <div style="background-color:#ffffff; width: 100%;">
       </div>
     </div>
+
+
+
+
+
+
+
     <script src="script.js"></script>
   </body>
+
   <head>
     <script type="module" src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>

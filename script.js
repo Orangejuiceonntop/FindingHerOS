@@ -5,6 +5,7 @@ setInterval(function() {
     document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
 }, 1000);
 
+//Allows windows to be dragged/moved
 dragElement(document.getElementById("welcome"));
 dragElement(document.querySelector('#notes'))
 
@@ -91,6 +92,7 @@ function openWindow(element) {
   element.style.zIndex = biggestIndex;
 }
 
+//Click on window, it goes on top
 document.addEventListener('mousedown', (e) =>{
   const clickedWindow = e.target.closest('.window');
   if (clickedWindow) {
@@ -100,6 +102,7 @@ document.addEventListener('mousedown', (e) =>{
   }
 })
 
+//Top bar will always be on top of the screens
 var topBar = document.querySelector("#top")
 function openWindow(element) {
   element.style.display = "block";
@@ -112,18 +115,4 @@ function handleWindowTap(element) {
   element.style.zIndex = biggestIndex;
   topBar.style.zIndex = biggestIndex + 1
   deselectIcon(selectedIcon)
-}
-
-function initializeWindow(notes) {
-  var screen = document.querySelector("#" + elementName)
-  addWindowTapHandling(notesScreen)
-  makeCloseable(elementname)
-  dragElement(notesScreen)
-}
-
-function initializeWindow(welcomeScreen) {
-  var screen = document.querySelector("#" + elementName)
-  addWindowTapHandling(windowScreen)
-  makeCloseable(elementname)
-  dragElement(windowScreen)
 }
