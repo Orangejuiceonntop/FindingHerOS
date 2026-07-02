@@ -8,6 +8,7 @@ setInterval(function() {
 //Allows windows to be dragged/moved
 dragElement(document.getElementById("welcome"));
 dragElement(document.querySelector('#notes'))
+dragElement(document.querySelector('#calc'))
 
 function dragElement(element) {
   var initialX = 0;
@@ -84,6 +85,12 @@ var notesScreenClose = document.querySelector('#notesclose')
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
 var notesScreenOpen = document.querySelector('#notesopen')
 notesScreenOpen.addEventListener("click", () => openWindow(notesScreen))
+
+var calcScreen = document.querySelector('#calc')
+var calcScreenClose = document.querySelector('#calcclose')
+calcScreenClose.addEventListener("click", () => closeWindow(calcScreen))
+var calcScreenOpen = document.querySelector('#calcopen')
+calcScreenOpen.addEventListener("click", () => openWindow(calcScreen))
 
 var biggestIndex = 1;
 function openWindow(element) {
