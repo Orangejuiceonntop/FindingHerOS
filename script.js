@@ -7,8 +7,9 @@ setInterval(function() {
 
 //Allows windows to be dragged/moved
 dragElement(document.getElementById("welcome"));
-dragElement(document.querySelector('#notes'))
-dragElement(document.querySelector('#calc'))
+dragElement(document.querySelector('#notes'));
+dragElement(document.querySelector('#calc'));
+dragElement(document.querySelector('#paint'));
 
 function dragElement(element) {
   var initialX = 0;
@@ -80,17 +81,24 @@ function handleIconTap(element) {
   }
 }
 
+//open and close windows
 var notesScreen = document.querySelector('#notes')
 var notesScreenClose = document.querySelector('#notesclose')
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
 var notesScreenOpen = document.querySelector('#notesopen')
-notesScreenOpen.addEventListener("click", () => openWindow(notesScreen))
+notesScreenOpen.addEventListener("click", () => openWindow(notesScreen));
 
 var calcScreen = document.querySelector('#calc')
 var calcScreenClose = document.querySelector('#calcclose')
-calcScreenClose.addEventListener("click", () => closeWindow(calcScreen))
+calcScreenClose.addEventListener("click", () => closeWindow(calcScreen));
 var calcScreenOpen = document.querySelector('#calcopen')
-calcScreenOpen.addEventListener("click", () => openWindow(calcScreen))
+calcScreenOpen.addEventListener("click", () => openWindow(calcScreen));
+
+var paintScreen = document.querySelector('#paint')
+var paintScreenClose = document.querySelector('#paintclose')
+paintScreenClose.addEventListener("click", () => closeWindow(paintScreen));
+var paintScreenOpen = document.querySelector('#paintopen')
+paintScreenOpen.addEventListener("click", () => openWindow(paintScreen))
 
 var biggestIndex = 1;
 function openWindow(element) {
